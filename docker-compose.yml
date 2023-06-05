@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  solr:
+    image: "solr:latest"
+    container_name: solr
+    hostname: solr
+    ports:
+     - "8983:8983"
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mkdir -p server/solr/configsets/nutch/
+        docker-entrypoint.sh solr-precreate nutch
+    volumes:
+      - ./solr/data:/opt/solr/server/solr/configsets/nutch
+      - ./nutch/schema.xml:/opt/solr/server/solr/configsets/nutch/conf/schema.xml
+      - ./solr/conf/solrconfig.xml:/opt/solr/server/solr/configsets/nutch/conf/solrconfig.xml
+      - ./solr/conf/solrconfig.xml:/opt/solr/server/solr/configsets/_default/conf/solrconfig.xml
+    networks:
+      - solr-net
+  
+  nutch:
+    image: "apache/nutch:latest"
+    container_name: nutch
+    links:
+      - solr
+    environment: 
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+    working_dir: /root/nutch_source
+    ports:
+      - "8081:8081"
+      - "8080:8080"
+    entrypoint: 
+      - sh
+      - -c
+      - |
+        crawl -i -D solr.server.url=http://localhost:8983/solr/nutch -s urls crawl 30
+    volumes:
+        - ./nutch/exchanges.xml:/root/nutch_source/runtime/local/conf/exchanges.xml
+        - ./nutch/index-writers.xml:/root/nutch_source/runtime/local/conf/index-writers.xml
+        - ./nutch/nutch-site.xml:/root/nutch_source/runtime/local/conf/nutch-site.xml
+        - ./nutch/regex-urlfilter.txt:/root/nutch_source/runtime/local/conf/regex-urlfilter.txt
+        - ./nutch/seed.txt:/root/nutch_source/urls/seed.txt
+    networks:
+      - solr-net
+  
+  python:
+    container_name: python
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: python-mongodb-connect
+    links:
+      - solr
+    depends_on:
+      - solr
+    networks:
+      - solr-net
+  
+networks:
+  solr-net:
+    name: solr-network
