@@ -69,14 +69,14 @@ CMD [ "python", "-u", "app.py" ]
 
 Run the following command to start the project:
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 This will create and start the following containers:
 - nutch
 - solr
 - python
 
-To access the `solr` container, acess the following URL in your browser:
+To access the `solr` container, go to the following URL in your browser:
 ```bash
 http://localhost:8983/solr/
 ```
