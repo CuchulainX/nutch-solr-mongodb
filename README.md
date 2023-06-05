@@ -76,6 +76,11 @@ This will create and start the following containers:
 - solr
 - python
 
+To access the `solr` container, acess the following URL in your browser:
+```bash
+http://localhost:8983/solr/
+```
+
 To stop the project, run the following command:
 ```bash
 docker-compose down --rmi local
