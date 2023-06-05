@@ -25,6 +25,8 @@ except Exception as e:
 
 
 if DATABASE in client.list_database_names():
+    db = client[DATABASE]
+    collection = db[COLLECTION]
     print("Database already exists")
 else:
     print("Creating database")
