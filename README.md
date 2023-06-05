@@ -2,8 +2,8 @@
 ## DataHarvest: Dockerized Web Crawling, Indexing, and Storage Solution
 
 ### Team Members
-- Azeem Ahmed
-- Shahryar Ahmed
+- :student: Azeem Ahmed
+- :student: Shahryar Ahmed
 
 ### Project Description
 DataHarvest is a cutting-edge web crawling, indexing, and storage solution implemented using Docker. It leverages the power of Docker's containerization to provide seamless deployment, scalability, and portability. With DataHarvest, organizations can efficiently extract and process data from the web, while storing it in a reliable and easily manageable manner. Empowered by Docker, DataHarvest simplifies the setup process, ensures scalability for handling large volumes of data, and offers flexibility across different environments. Experience advanced web crawling and storage with DataHarvest, the Dockerized solution for your data extraction needs.
@@ -50,7 +50,7 @@ Setup `auth.json` file in the `root` directory. This file contains the credentia
 }
 ```
 
-Following `Dockerfile` is used to build the `python` image:
+Following `Dockerfile` is used to build the `python` image [^1].
 ```dockerfile
 FROM python:latest
 
@@ -97,3 +97,6 @@ To configure the solr container, simply set the target website in the `seed.txt`
 
 #### Data Retrieval
 To retrieve data from the `solr` container, python scripts are used. The `python` container is used to run `app.py` which retrieves data from the `solr` container and stores it in the MongoDB database.
+
+
+[^1]: [Dockerfile Reference](https://hub.docker.com/_/python)
