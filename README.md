@@ -1,0 +1,1 @@
+# nutch_solr_mongodb
