@@ -47,7 +47,7 @@ Setup `auth.json` file in the `root` directory. This file contains the credentia
 
 ```json
 {
-    "username": "username",
+    "user": "username",
     "password": "password"
 }
 ```
