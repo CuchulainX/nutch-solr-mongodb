@@ -1,18 +1,20 @@
 # BDA Final Project
 ## DataHarvest: Dockerized Web Crawling, Indexing, and Storage Solution
 
+![](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white) ![](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white) ![](https://img.shields.io/badge/Apache%20Solr-D9411E.svg?style=for-the-badge&logo=Apache-Solr&logoColor=white) ![](https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white)
+
 ### Team Members
 - :student: Azeem Ahmed
-- :student: Shahryar Ahmed
+- :student: Shaheryar Ahmed
 
 ### Project Description
 DataHarvest is a cutting-edge web crawling, indexing, and storage solution implemented using Docker. It leverages the power of Docker's containerization to provide seamless deployment, scalability, and portability. With DataHarvest, organizations can efficiently extract and process data from the web, while storing it in a reliable and easily manageable manner. Empowered by Docker, DataHarvest simplifies the setup process, ensures scalability for handling large volumes of data, and offers flexibility across different environments. Experience advanced web crawling and storage with DataHarvest, the Dockerized solution for your data extraction needs.
 
 ### Technology Stack
 Below mentioned technologies are used in this project:
-| Apache Nutch | Apache Solr | MongoDB |
-|-------|------|---------|
-| <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/nutch.svg width="252" height="105" alt="Nutch"/> | <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/solr.svg width="252" height="140" alt="Solr"/> | <img src="https://storage-us-gcs.bfldr.com/85s8xk2j3k89b67xr8c7vwmv/v/1069931049/original/MongoDB_ForestGreen.png?Expires=1686073601&KeyName=gcs-bfldr-prod&Signature=Jj6ekJDhgqLy13MhcB_ohikuY78=" width="400" height="101" alt="MongoDB"/> |
+| Docker | Apache Nutch | Apache Solr | MongoDB |
+|-------|------|---------|-----------|
+| <img src=https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png width="174.25" height="149" alt="Docker"/> | <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/nutch.svg width="180" height="75" alt="Nutch"/> | <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/solr.svg width="180" height="100" alt="Solr"/> | <img src="https://storage-us-gcs.bfldr.com/85s8xk2j3k89b67xr8c7vwmv/v/1069931049/original/MongoDB_ForestGreen.png?Expires=1686073601&KeyName=gcs-bfldr-prod&Signature=Jj6ekJDhgqLy13MhcB_ohikuY78=" width="200" height="50.50" alt="MongoDB"/> |
 
 Apache Nutch is a highly extensible and scalable web crawler written in Java. It is a part of the Apache Hadoop ecosystem and is used to extract and process data from the web. Apache Solr is an open-source enterprise search platform written in Java. It is used to index and search large volumes of data. MongoDB is a NoSQL database that is used to store data in a document-oriented manner. It is a highly scalable and flexible database that is used to store large volumes of data.
 
