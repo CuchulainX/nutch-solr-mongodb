@@ -101,6 +101,6 @@ To configure the solr container, simply set the target website in the `seed.txt`
 To retrieve data from the `solr` container, python scripts are used. The `python` container is used to run `app.py` which retrieves data from the `solr` container and stores it in the MongoDB database.
 
 ## Project Video
-Video of working project can be accessed from here ![Link](https://youtu.be/vqmDYkfE3Jw)
+Video of working project can be accessed from here [Link](https://youtu.be/vqmDYkfE3Jw)
 
 [^1]: [Dockerfile Reference](https://hub.docker.com/_/python)
