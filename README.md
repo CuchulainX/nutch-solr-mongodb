@@ -3,14 +3,14 @@
 
 ![](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white) ![](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white) ![](https://img.shields.io/badge/Apache%20Solr-D9411E.svg?style=for-the-badge&logo=Apache-Solr&logoColor=white) ![](https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white)
 
-### Team Members
+### :+1: Team Members
 - :student: Azeem Ahmed
 - :student: Shaheryar Ahmed
 
-### Project Description
+### :page_facing_up: Project Description
 DataHarvest is a cutting-edge web crawling, indexing, and storage solution implemented using Docker. It leverages the power of Docker's containerization to provide seamless deployment, scalability, and portability. With DataHarvest, organizations can efficiently extract and process data from the web, while storing it in a reliable and easily manageable manner. Empowered by Docker, DataHarvest simplifies the setup process, ensures scalability for handling large volumes of data, and offers flexibility across different environments. Experience advanced web crawling and storage with DataHarvest, the Dockerized solution for your data extraction needs.
 
-### Technology Stack
+### :man_technologist: Technology Stack
 Below mentioned technologies are used in this project:
 | Docker | Apache Nutch | Apache Solr | MongoDB |
 |-------|------|---------|-----------|
@@ -20,7 +20,7 @@ Apache Nutch is a highly extensible and scalable web crawler written in Java. It
 
 Apache Nutch and Apache Solr operate independently in their respective containers, enabling efficient and scalable web crawling and indexing. The containerized Python environment facilitates seamless data retrieval from the Apache Solr container, while securely storing the results in a cloud-hosted MongoDB database.
 
-### Project Setup
+### :dvd: Project Setup
 Setup free tier MongoDB Atlas by following the instructions below link:
 
 [MongoDB Atlas Free Tier](https://www.mongodb.com/developer/products/atlas/free-atlas-cluster/)
@@ -88,19 +88,19 @@ To stop the project, run the following command:
 docker-compose down --rmi local
 ```
 
-### Project Usage
+### :gear: Project Usage
 The project can be used to crawl and index data from the web. The data can be retrieved from the MongoDB database using the Python container. The following sections describe the usage of the project in detail.
 
-#### Crawling
+#### :one: Crawling
 To configure the nutch container, simply set the target website in the `seed.txt` file located in the `nutch/urls` directory. Additionally, you can customize the crawling behavior by modifying the `regex-urlfilter.txt` file in the `nutch/conf` directory, allowing you to define specific regex patterns for data extraction.
 
-#### Indexing
-To configure the solr container, simply set the target website in the `seed.txt` file located in the `nutch/urls` directory. Additionally, you can customize the indexing behavior by modifying the `schema.xml` file in the `/opt/solr/server/solr/configsets/nutch/conf/` directory, allowing you to define specific fields for data indexing.
+#### :two: Indexing
+You can customize the indexing behavior by modifying the `schema.xml` file in the `/opt/solr/server/solr/configsets/nutch/conf/` directory, allowing you to define specific fields for data indexing.
 
-#### Data Retrieval
+#### :three: Data Retrieval
 To retrieve data from the `solr` container, python scripts are used. The `python` container is used to run `app.py` which retrieves data from the `solr` container and stores it in the MongoDB database.
 
-## Project Video
+## :tv: Project Video
 Video of working project can be accessed from here [Link](https://youtu.be/vqmDYkfE3Jw)
 
 [^1]: [Dockerfile Reference](https://hub.docker.com/_/python)
