@@ -10,7 +10,7 @@
 ### :page_facing_up: Project Description
 DataHarvest is a cutting-edge web crawling, indexing, and storage solution implemented using Docker. It leverages the power of Docker's containerization to provide seamless deployment, scalability, and portability. With DataHarvest, organizations can efficiently extract and process data from the web, while storing it in a reliable and easily manageable manner. Empowered by Docker, DataHarvest simplifies the setup process, ensures scalability for handling large volumes of data, and offers flexibility across different environments. Experience advanced web crawling and storage with DataHarvest, the Dockerized solution for your data extraction needs.
 
-### :man_technologist: Technology Stack
+### :computer: Technology Stack
 Below mentioned technologies are used in this project:
 | Docker | Apache Nutch | Apache Solr | MongoDB |
 |-------|------|---------|-----------|
@@ -20,7 +20,7 @@ Apache Nutch is a highly extensible and scalable web crawler written in Java. It
 
 Apache Nutch and Apache Solr operate independently in their respective containers, enabling efficient and scalable web crawling and indexing. The containerized Python environment facilitates seamless data retrieval from the Apache Solr container, while securely storing the results in a cloud-hosted MongoDB database.
 
-### :dvd: Project Setup
+### :man_technologist: Project Setup
 Setup free tier MongoDB Atlas by following the instructions below link:
 
 [MongoDB Atlas Free Tier](https://www.mongodb.com/developer/products/atlas/free-atlas-cluster/)
