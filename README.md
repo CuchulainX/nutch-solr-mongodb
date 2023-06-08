@@ -14,7 +14,7 @@ DataHarvest is a cutting-edge web crawling, indexing, and storage solution imple
 Below mentioned technologies are used in this project:
 | Docker | Apache Nutch | Apache Solr | MongoDB |
 |-------|------|---------|-----------|
-| <img src=https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png width="174.25" height="149" alt="Docker"/> | <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/nutch.svg width="180" height="75" alt="Nutch"/> | <img src=https://svn.apache.org/repos/asf/comdev/project-logos/originals/solr.svg width="180" height="100" alt="Solr"/> | <img src="https://storage-us-gcs.bfldr.com/85s8xk2j3k89b67xr8c7vwmv/v/1069931049/original/MongoDB_ForestGreen.png?Expires=1686073601&KeyName=gcs-bfldr-prod&Signature=Jj6ekJDhgqLy13MhcB_ohikuY78=" width="200" height="50.50" alt="MongoDB"/> |
+| <img src="./images/vertical-logo-monochromatic.png" width="174.25" height="149" alt="Docker"/> | <img src="./images/nutch.svg" width="180" height="75" alt="Nutch"/> | <img src="./images/solr.svg" width="180" height="100" alt="Solr"/> | <img src="./images/MongoDB_Fores-Green.svg" width="200" height="50.50" alt="MongoDB"/> |
 
 Apache Nutch is a highly extensible and scalable web crawler written in Java. It is a part of the Apache Hadoop ecosystem and is used to extract and process data from the web. Apache Solr is an open-source enterprise search platform written in Java. It is used to index and search large volumes of data. MongoDB is a NoSQL database that is used to store data in a document-oriented manner. It is a highly scalable and flexible database that is used to store large volumes of data.
 
