@@ -41,7 +41,7 @@ git clone https://github.com/AzeemQidwai/nutch_solr_mongodb.git
 ```
 Navigate to the project directory using the following command:
 ```bash
-cd nutch_solr_mongodb
+cd nutch-solr-mongodb
 ```
 Setup `auth.json` file in the `root` directory. This file contains the credentials for the MongoDB database. The file should be in the following format:
 
