@@ -37,7 +37,7 @@ sudo apt-get install -y docker.io docker-compose
 ```
 Clone the repository using the following command:
 ```bash
-git clone https://github.com/AzeemQidwai/nutch_solr_mongodb.git
+git clone https://github.com/AzeemQidwai/nutch-solr-mongodb.git
 ```
 Navigate to the project directory using the following command:
 ```bash
