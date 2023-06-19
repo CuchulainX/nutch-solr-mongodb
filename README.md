@@ -3,7 +3,7 @@
 
 ![](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white) ![](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white) ![](https://img.shields.io/badge/Apache%20Solr-D9411E.svg?style=for-the-badge&logo=Apache-Solr&logoColor=white) ![](https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white)
 
-### :+1: Team Members
+### :school: Team Members
 - :student: Azeem Ahmed
 - :student: Shaheryar Ahmed
 
