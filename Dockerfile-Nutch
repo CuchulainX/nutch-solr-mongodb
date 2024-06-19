@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM arm64v8/ubuntu:20.04
 
 # Set environment variables
 ENV NUTCH_VERSION 1.18
@@ -8,14 +8,8 @@ ENV NUTCH_URL https://downloads.apache.org/nutch/$NUTCH_VERSION/$NUTCH_ARCHIVE
 
 # Install required packages and keys
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends gnupg2 dirmngr && \
-    rm -rf /var/lib/apt/lists/* && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 648ACFD622F3D138 04EE7237B7D453EC && \
-    echo "deb http://deb.debian.org/debian bullseye main" > /etc/apt/sources.list && \
-    echo "deb http://deb.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
-    echo "deb http://deb.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
-    apt-get update && \
-    apt-get install -y wget && \
+    apt-get install -y --no-install-recommends wget gnupg && \
+    wget -qO - https://www.apache.org/dist/nutch/KEYS | apt-key add - && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
