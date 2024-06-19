@@ -21,21 +21,23 @@ services:
       - solr-net
   
   nutch:
-    image: "apache/nutch:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile-Nutch
     container_name: nutch
     links:
       - solr
-    environment: 
+    environment:
       - JAVA_HOME=/usr/lib/jvm/java-11-openjdk
     working_dir: /root/nutch_source
     ports:
       - "8081:8081"
       - "8080:8080"
-    entrypoint: 
+    entrypoint:
       - sh
       - -c
       - |
-        crawl -i -D solr.server.url=http://localhost:8983/solr/nutch -s urls crawl 30
+        crawl -i -D solr.server.url=http://solr:8983/solr/nutch -s urls crawl 30
     volumes:
         - ./nutch/exchanges.xml:/root/nutch_source/runtime/local/conf/exchanges.xml
         - ./nutch/index-writers.xml:/root/nutch_source/runtime/local/conf/index-writers.xml
@@ -44,12 +46,12 @@ services:
         - ./nutch/seed.txt:/root/nutch_source/urls/seed.txt
     networks:
       - solr-net
-  
+
   python:
     container_name: python
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-Python
     image: python-mongodb-connect
     links:
       - solr
@@ -57,7 +59,7 @@ services:
       - solr
     networks:
       - solr-net
-  
+
 networks:
   solr-net:
     name: solr-network
